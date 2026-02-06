@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    @apply font-body bg-bg-primary text-text-primary antialiased overflow-x-hidden;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+/* Lenis Recommended Styles */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.bg-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(207, 177, 96, 0.03) 0%, transparent 60%);
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
