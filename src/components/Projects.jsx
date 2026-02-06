@@ -5,24 +5,50 @@ import { motion } from 'framer-motion'
 
 const projects = [
     {
-        title: 'E-Commerce Platform',
-        desc: 'A full-scale e-commerce solution with real-time inventory management, payment gateway integration, and a comprehensive admin dashboard.',
+        title: 'Service Booking Platform',
+        desc: 'A front-end service booking platform that allows users to view available services and place booking requests with a clean and intuitive UI.',
         link: '#',
-        tags: ['React', 'Node.js', 'MongoDB']
+        live: 'https://fixora-client.vercel.app/',
+        tags: ['HTML', 'CSS', 'JavaScript']
     },
     {
-        title: 'Social Media App',
-        desc: 'Interactive social networking platform featuring real-time messaging, feed algorithms, and robust user authentication systems.',
-        link: '#',
-        tags: ['React', 'Firebase', 'Tailwind']
+        title: 'GreenCart E-Commerce',
+        desc: 'An e-commerce website for browsing products and managing a shopping cart, built with a focus on responsive design and user-friendly navigation.',
+        link: 'https://github.com/deekshith0803/GreenCart-E-commerce',
+        live: null,
+        tags: ['HTML', 'CSS', 'JavaScript']
     },
     {
-        title: 'Task Management System',
-        desc: 'Collaborative project management tool allowing teams to track progress, assign tasks, and visualize workflows effectively.',
-        link: '#',
-        tags: ['React', 'Redux', 'Express']
+        title: 'Authentication System',
+        desc: 'A secure authentication system implementing user registration and login with password hashing and session handling.',
+        link: 'https://github.com/deekshith0803/Authentification-system',
+        live: null,
+        tags: ['Node.js', 'Express', 'MongoDB']
+    },
+    {
+        title: 'Netflix UI Clone',
+        desc: 'A front-end clone of the Netflix homepage recreated using modern HTML and CSS, focusing on layout structure and visual consistency.',
+        link: 'https://github.com/deekshith0803/Netflix-demo',
+        live: null,
+        tags: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+        title: 'Job Board Website',
+        desc: 'A job board website that displays job listings in a structured layout, designed to practice responsive UI and layout organization.',
+        link: 'https://github.com/deekshith0803/job-board-website',
+        live: null,
+        tags: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+        title: 'Parle Frooti Website Clone',
+        desc: 'A static website clone inspired by the Parle Frooti brand, built to practice typography, layout design, and brand-oriented UI styling.',
+        link: 'https://github.com/deekshith0803/parle_frooti',
+        live: null,
+        tags: ['HTML', 'CSS']
     }
 ]
+
+
 
 const Projects = () => {
     return (
@@ -60,14 +86,28 @@ const Projects = () => {
                                 <p className="text-base text-text-secondary mb-8 leading-relaxed flex-1 font-medium">
                                     {project.desc}
                                 </p>
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:gap-4 hover:text-accent-gold"
-                                >
-                                    View Project <span className="text-lg">→</span>
-                                </a>
+                                <div className="flex items-center justify-between mt-auto">
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:gap-4 hover:text-accent-gold"
+                                    >
+                                        View Project <span className="text-lg">→</span>
+                                    </a>
+
+                                    {project.live && (
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:gap-4 hover:text-accent-gold"
+                                        >
+                                            Live <span className="text-lg">→</span>
+                                        </a>
+                                    )}
+                                </div>
+
                             </div>
                         </motion.div>
                     ))}
