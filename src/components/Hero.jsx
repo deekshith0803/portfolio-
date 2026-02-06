@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Hero: React.FC = () => {
+const Hero = () => {
     return (
         <section id="home" className="min-h-screen flex items-center relative z-10 py-20 lg:py-32 overflow-hidden">
             <div className="container flex flex-col items-center justify-center min-h-[70vh] lg:min-h-[80vh] relative">

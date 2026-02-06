@@ -1,8 +1,8 @@
 import React from 'react'
-import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaInstagram, FaBehance } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
-const Contact: React.FC = () => {
+const Contact = () => {
     return (
         <section id="contact" className="py-20 lg:py-32 relative">
             <div className="container mx-auto px-6">
@@ -38,6 +38,12 @@ const Contact: React.FC = () => {
                         </a>
                         <a href="https://www.linkedin.com/in/deekshith-m-378bb9302/" target="_blank" rel="noreferrer" className="w-16 h-16 flex items-center justify-center border border-white/10 text-xl text-white transition-all duration-300 hover:border-accent-gold hover:text-black hover:bg-accent-gold">
                             <FaLinkedinIn />
+                        </a>
+                        <a href="https://www.instagram.com/dee_kshith_._/" target="_blank" rel="noreferrer" className="w-16 h-16 flex items-center justify-center border border-white/10 text-xl text-white transition-all duration-300 hover:border-accent-gold hover:text-black hover:bg-accent-gold">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://www.behance.net/deekshithm2" target="_blank" rel="noreferrer" className="w-16 h-16 flex items-center justify-center border border-white/10 text-xl text-white transition-all duration-300 hover:border-accent-gold hover:text-black hover:bg-accent-gold">
+                            <FaBehance />
                         </a>
                         <a href="mailto:deekshithm321@gmail.com" className="w-16 h-16 flex items-center justify-center border border-white/10 text-xl text-white transition-all duration-300 hover:border-accent-gold hover:text-black hover:bg-accent-gold">
                             <FaEnvelope />

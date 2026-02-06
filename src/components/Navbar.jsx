@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react'
 
-interface NavLink {
-    name: string;
-    href: string;
-}
 
-const navLinks: NavLink[] = [
+
+const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
 ]
 
-const Navbar: React.FC = () => {
-    const [scrolled, setScrolled] = useState<boolean>(false)
-    const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
+const Navbar = () => {
+    const [scrolled, setScrolled] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,7 +22,7 @@ const Navbar: React.FC = () => {
     }, [])
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-bg-primary/95 backdrop-blur-md border-b border-white/5' : 'py-8 bg-transparent'}`}>
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg' : 'py-8 bg-transparent'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="font-display text-3xl tracking-widest text-text-primary z-[51] font-bold">DK.</a>
 

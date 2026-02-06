@@ -1,14 +1,11 @@
 import React from 'react'
 import { FaReact, FaNodeJs, FaDatabase, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaPalette } from 'react-icons/fa'
-import { IconType } from 'react-icons'
+
 import { motion } from 'framer-motion'
 
-interface Skill {
-    name: string;
-    icon: IconType;
-}
 
-const skills: Skill[] = [
+
+const skills = [
     { name: 'Frontend / React', icon: FaReact },
     { name: 'Backend / Node.js', icon: FaNodeJs },
     { name: 'Database / Mongo', icon: FaDatabase },
@@ -34,7 +31,7 @@ const itemVariants = {
     show: { opacity: 1, y: 0 }
 }
 
-const About: React.FC = () => {
+const About = () => {
     return (
         <section id="about" className="py-20 lg:py-32 relative">
             <div className="container mx-auto px-6">

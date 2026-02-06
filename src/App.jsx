@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Lenis from 'lenis'
 import Navbar from './components/Navbar'
+import CanvasBackground from './components/CanvasBackground'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -17,7 +18,7 @@ function App() {
             smoothWheel: true,
         })
 
-        function raf(time: number) {
+        function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
@@ -32,6 +33,8 @@ function App() {
     return (
         <main className="bg-bg-primary min-h-screen text-text-primary selection:bg-accent-gold selection:text-black overflow-hidden font-body">
             <div className="fixed inset-0 z-0 pointer-events-none bg-glow"></div>
+            <div className="bg-noise"></div>
+            <CanvasBackground />
 
             <div className="relative z-10">
                 <Navbar />

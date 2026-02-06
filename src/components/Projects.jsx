@@ -1,14 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-interface Project {
-    title: string;
-    desc: string;
-    link: string;
-    tags: string[];
-}
 
-const projects: Project[] = [
+
+const projects = [
     {
         title: 'E-Commerce Platform',
         desc: 'A full-scale e-commerce solution with real-time inventory management, payment gateway integration, and a comprehensive admin dashboard.',
@@ -29,7 +24,7 @@ const projects: Project[] = [
     }
 ]
 
-const Projects: React.FC = () => {
+const Projects = () => {
     return (
         <section id="projects" className="py-20 lg:py-32 bg-bg-secondary/30 relative">
             <div className="container mx-auto px-6">
