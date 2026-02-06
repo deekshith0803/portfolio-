@@ -8,31 +8,59 @@
     <meta name="description"
         content="Portfolio of Deekshith M, a MERN Stack Developer specializing in modern web applications.">
 
-    <!-- Google Fonts: Outfit for a modern look -->
+    <!-- Google Fonts - Cinematic Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
 
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GSAP & Lenis for Modern Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 </head>
 
 <body>
+    <!-- Preloader - Temporarily Disabled for Debugging -->
+    <!--
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span>DEEKSHITH M</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <!-- Animated Background Glow -->
+    <div class="bg-glow"></div>
+
+    <!-- Custom Background Canvas -->
+    <canvas id="hero-canvas"></canvas>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Deekshith<span class="accent">.</span></a>
+            <a href="#" class="logo">Deekshith</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
     </nav>
@@ -40,64 +68,85 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-container">
-            <div class="hero-content">
-                <h3 class="subtitle">Hello, I'm</h3>
-                <h1 class="title">Deekshith M</h1>
-                <h2 class="role">MERN Stack Developer</h2>
-                <p class="description">
-                    Building modern, scalable, and user-friendly web applications.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <div class="hero-right">
+                <div class="hero-content">
+                    <span class="subtitle">Full Stack Developer</span>
+                    <h1 class="title">Deekshith M</h1>
+                    <p class="description">
+                        Crafting digital experiences with precision and purpose. Specialized in building
+                        high-performance
+                        web applications.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary magnetic">Featured Work</a>
+                        <a href="#contact" class="btn btn-outline magnetic">Let's Talk</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="components/images/profile.jpg" alt="Deekshith M">
+            <div class="hero-left">
+                <div class="hero-visual">
+                    <div class="hero-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                    <div class="hero-decoration"></div>
+                </div>
             </div>
         </div>
-        <!-- Decorative abstract element -->
-        <div class="hero-shape"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <span class="section-number">01</span>
+            <h2 class="section-title">About</h2>
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        Hi! I'm <strong>Deekshith M</strong>, a passionate web developer based in Kerala, India.
-                        I am currently specializing in the <strong>MERN Stack</strong> (MongoDB, Express, React,
-                        Node.js).
+                        I'm <strong>Deekshith M</strong>, a developer focused on creating clean, intuitive, and
+                        performant digital experiences. My approach blends technical expertise with a keen eye for
+                        minimalist design.
                     </p>
                     <p>
-                        I love building scalable web applications and exploring new technologies.
-                        My journey involves creating practical projects like e-commerce platforms and service
-                        booking systems to solve real-world problems.
+                        Currently specializing in the <strong>MERN Stack</strong>, I enjoy solving complex problems
+                        through elegant code and modern architecture.
                     </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3>10+</h3>
-                            <p>Projects</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>100%</h3>
-                            <p>Commitment</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="skills-container">
-                    <h3>Tech Stack</h3>
                     <div class="skills-grid">
-                        <div class="skill-card"><i class="fab fa-react"></i> React</div>
-                        <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
-                        <div class="skill-card"><i class="fas fa-database"></i> MongoDB</div>
-                        <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
-                        <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
-                        <div class="skill-card"><i class="fab fa-css3-alt"></i> Tailwind</div>
-                        <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
-                        <div class="skill-card"><i class="fas fa-palette"></i> Photoshop</div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">Frontend / React</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-node-js"></i>
+                            <span class="skill-name">Backend / Node.js</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fas fa-database"></i>
+                            <span class="skill-name">Database / Mongo</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-js"></i>
+                            <span class="skill-name">Language / JS</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-html5"></i>
+                            <span class="skill-name">Markup / HTML5</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-css3-alt"></i>
+                            <span class="skill-name">Style / Tailwind</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fab fa-git-alt"></i>
+                            <span class="skill-name">Version / Git</span>
+                        </div>
+                        <div class="skill-card mouse-glow">
+                            <i class="fas fa-palette"></i>
+                            <span class="skill-name">Design / PS</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,49 +154,41 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <span class="section-number">02</span>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card mouse-glow">
                     <div class="card-content">
                         <h3 class="project-title">Service Booking Platform</h3>
-                        <p class="project-desc">A comprehensive platform for booking various services online.
-                            Features user authentication and service management.</p>
-                        <div class="tech-tags">
-                            <span>JavaScript</span><span>MERN</span>
-                        </div>
+                        <p class="project-desc">A comprehensive platform for booking various services online. Features
+                            authentication and management.</p>
                         <a href="https://github.com/deekshith0803/Service-booking-platform" target="_blank"
-                            class="btn-link">View Code <i class="fab fa-github"></i></a>
+                            class="btn-link">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card mouse-glow">
                     <div class="card-content">
                         <h3 class="project-title">GreenCart E-commerce</h3>
-                        <p class="project-desc">A full-featured e-commerce application for purchasing organic
-                            products. Includes cart functionality and product browsing.</p>
-                        <div class="tech-tags">
-                            <span>JavaScript</span><span>E-commerce</span>
-                        </div>
+                        <p class="project-desc">A full-featured e-commerce application for organic products. Includes
+                            cart and browsing.</p>
                         <a href="https://github.com/deekshith0803/GreenCart-E-commerce" target="_blank"
-                            class="btn-link">View Code <i class="fab fa-github"></i></a>
+                            class="btn-link">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <div class="project-card mouse-glow">
                     <div class="card-content">
                         <h3 class="project-title">Authentication System</h3>
-                        <p class="project-desc">A robust user authentication system implementing secure login and
-                            signup flows using EJS and Node.js.</p>
-                        <div class="tech-tags">
-                            <span>EJS</span><span>Node.js</span>
-                        </div>
+                        <p class="project-desc">A robust user authentication system with secure login and signup flows.
+                        </p>
                         <a href="https://github.com/deekshith0803/Authentification-system" target="_blank"
-                            class="btn-link">View Code <i class="fab fa-github"></i></a>
+                            class="btn-link">View Project →</a>
                     </div>
                 </div>
 
@@ -156,12 +197,9 @@
                     <div class="card-content">
                         <h3 class="project-title">Job Board Website</h3>
                         <p class="project-desc">A responsive frontend design for a job board application, showcasing
-                            clean CSS and layout skills.</p>
-                        <div class="tech-tags">
-                            <span>CSS</span><span>HTML</span>
-                        </div>
+                            clean layout skills.</p>
                         <a href="https://github.com/deekshith0803/job-board-website" target="_blank"
-                            class="btn-link">View Code <i class="fab fa-github"></i></a>
+                            class="btn-link">View Project →</a>
                     </div>
                 </div>
             </div>
@@ -171,33 +209,38 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-card">
+                <span class="subtitle">Let's Connect</span>
                 <p class="contact-text">
-                    I'm currently looking for new opportunities. whether you have a question or just want to say hi,
-                    I'll try my best to get back to you!
+                    Let's build something <span class="accent">extraordinary</span> together.
                 </p>
                 <div class="social-links">
-                    <a href="https://github.com/deekshith0803" target="_blank" class="social-icon"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/deekshith-m-378bb9302/" target="_blank" class="social-icon"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:deekshithm321@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                    <a href="https://twitter.com/Deekshith__M_" target="_blank" class="social-icon"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="https://www.behance.net/deekshithm2" target="_blank" class="social-icon"><i
-                            class="fab fa-behance"></i></a>
+                    <a href="https://github.com/deekshith0803" target="_blank" class="social-icon magnetic"
+                        title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/deekshith-m-378bb9302/" target="_blank"
+                        class="social-icon magnetic" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:deekshithm321@gmail.com" class="social-icon magnetic" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <a href="mailto:deekshithm321@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
+                <a href="mailto:deekshithm321@gmail.com" class="btn btn-primary contact-cta">Get In Touch</a>
+
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Designed & Built by <span class="accent">Deekshith M</span></p>
-            <p class="copyright">&copy; <span id="year"></span> All rights reserved.</p>
+            <div class="footer-content">
+                <p class="footer-info">© <span id="year"></span> Deekshith M</p>
+                <p class="footer-info">Kerala, India</p>
+            </div>
         </div>
     </footer>
 
